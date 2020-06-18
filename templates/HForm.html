@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style type="text/css">
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px 15%;
+  background:black;
+}
+html{
+      height: 100%;
+      width: 100%;
+    }
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+  font-size: 90%;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+  /*form > div {
+    margin: 0 0 15px 0; 
+  }*/
+  form > div > label,
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+  legend {
+    text-align: right;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+{% block content %}
+<form action="/quality/" method="post">
+   {% csrf_token %}
+    {{ form }}
+
+  <header>
+    <h2><font color="white">Heart Disease Form</font></h2>
+    <br>
+    <hr>
+    <br>
+    <!-- <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div> -->
+  </header>
+ 
+    <div>
+    <fieldset>
+    
+      <legend id="title5" class="desc">
+      <font color="white">Select a Choice</font>
+      </legend>
+      
+      <div>
+        <input id="radioDefault_5" name="number2" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number2" type="radio" value=0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Male</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number2" type="radio" value=1  tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">Female</font> </label>
+        </div>
+        
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">Age</font> </label>
+    <div>
+      <input id="Field1" name="number3" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+
+   <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">Education </font></label>
+    <div>
+      <input id="Field1" name="number4" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+<div>
+    <fieldset>
+
+      <legend id="title5" class="desc"><font color="white">Current Smoker</font>
+
+      </legend>
+
+      <div>
+        <input id="radioDefault_5" name="number5" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number5" type="radio" value= 0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Yes</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number5" type="radio" value= 1 tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">No</font> </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">Cigarettes Per Day</font> </label>
+    <div>
+      <input id="Field1" name="number6" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+ <div>
+    <fieldset>
+
+      <legend id="title5" class="desc"><font color="white">BPMeds</font>
+
+      </legend>
+
+      <div>
+        <input id="radioDefault_5" name="number7" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number7" type="radio" value=0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Yes</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number7" type="radio" value=1 tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">No</font> </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+
+      <legend id="title5" class="desc"><font color="white">PrevalentStroke</font>
+
+      </legend>
+
+      <div>
+        <input id="radioDefault_5" name="number8" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number8" type="radio" value=0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Yes</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number8" type="radio" value=1 tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">No</font> </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+
+      <legend id="title5" class="desc"><font color="white">PrevalentHyp</font>
+
+      </legend>
+
+      <div>
+        <input id="radioDefault_5" name="number9" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number9" type="radio" value=0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Yes</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number9" type="radio" value=1 tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">No</font> </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+
+      <legend id="title5" class="desc"><font color="white">Diabetes</font>
+
+      </legend>
+
+      <div>
+        <input id="radioDefault_5" name="number10" type="hidden" value="">
+        <div>
+          <input id="Field5_0" name="number10" type="radio" value=0 tabindex="5" checked="checked">
+          <label class="choice" for="Field5_0"><font color="white">Yes</font> </label>
+        </div>
+        <div>
+          <input id="Field5_1" name="number10" type="radio" value=1 tabindex="6">
+          <label class="choice" for="Field5_1"><font color="white">No</font> </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">TotChol</font></label>
+    <div>
+      <input id="Field1" name="number11" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+     <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">SysBP</font></label>
+    <div>
+      <input id="Field1" name="number17" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">DiaBP</font></label>
+    <div>
+      <input id="Field1" name="number13" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">BMI</font></label>
+    <div>
+      <input id="Field1" name="number14" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">HeartRate</font></label>
+    <div>
+      <input id="Field1" name="number15" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1"><font color="white">Glucose</font></label>
+    <div>
+      <input id="Field1" name="number16" type="number" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <a href="https://colab.research.google.com/drive/1E4yZtmHJuCsshZSTFxWDqIpK-6k1z5tZ?usp=sharing"><input id="saveForm" name="saveForm" type="submit" value="Submit"></a>
+    </div>
+  </div>
+
+</form>
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+

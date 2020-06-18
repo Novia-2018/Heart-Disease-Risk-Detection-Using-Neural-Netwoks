@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formrun</title>
+	<style type="text/css">
+		#special{
+			padding-left: 50px
+	}
+	body{
+		background: url("https://miro.medium.com/max/1280/0*AN8suioCkeRkugES.gif");
+		 background-size: cover;
+            background-position: center;
+            background-origin: content-box;
+            font-family: Lato;
+            background-color:white;
+            background-repeat: no-repeat;
+	}
+	.special{
+		padding-left: 20px;
+	}
+	html{
+			height: 100%;
+		}
+	</style>
+
+</head>
+<body>
+		<div class="container">
+	  	<p><h2>Enter The Data :</h2></p>
+
+{% block content %}
+		<div class="container">
+  <form action="/quality/" method="post">
+     {% csrf_token %}
+    {{ form }}
+     <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Product ID</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="texts" id="fname" name="message" placeholder="Product id...">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Gender</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number1" placeholder="Gender...">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Age</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number2" placeholder="Age...">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Occupation</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number3" placeholder="Occupation...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>City_Category</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number4" placeholder="City_Category...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Stay_In_Current_City_Years</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number5" placeholder="Stay_In_Current_City_Years...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Marital_Status</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number6" placeholder="Marital_Status...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Product_Category_1</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number7" placeholder="Product_Category_1...">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Product_Category_2</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number8" placeholder="Product_Category_2...">
+      </div>
+    </div>
+
+          <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>Product_Category_2</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="fname" name="number9" placeholder="Product_Category_2...">
+      </div>
+    </div>
+    <br>
+      <input type="submit" value="submit">
+  </form>
+ {% endblock %}
+</div>
+</div>
+</body>
+</html>
