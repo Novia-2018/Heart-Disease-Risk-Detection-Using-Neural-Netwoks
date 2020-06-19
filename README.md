@@ -132,6 +132,6 @@ Contact-
 Team members- 
 
 			  
-              Lance Dsilva - codestacks123@gmail.com
-	      
               Novia Dsilva - codestacks123@gmail.com
+	      
+              Lance Dsilva - codestacks123@gmail.com
